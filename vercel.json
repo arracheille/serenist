@@ -2,14 +2,12 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/**/*.php": {
-            "runtime": "vercel-php@0.7.1"
-        }
+        "api/**/*.php": { "runtime": "vercel-php@0.7.5" }
     },
     "routes": [
+        { "src": "/(.*)", "dest": "/api/index.php" },
         { "src": "/build/(.*)", "dest": "/public/build/$1" },
-        { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        { "src": "/favicon.ico", "dest": "/public/favicon.ico" }
     ],
     "buildCommand": "npm run build",
     "outputDirectory": "public",
