@@ -2,11 +2,6 @@
 
 use Illuminate\Http\Request;
 
-if (isset($_SERVER['HTTP_X_NOW_DEPLOY']) || env('APP_ENV') === 'production') {
-    $_ENV['VIEW_COMPILED_PATH'] = '/tmp';
-    $_ENV['APP_BASE_PATH'] = '/var/task/user';
-}
-
 define('LARAVEL_START', microtime(true));
 
 // Determine if the application is in maintenance mode...
