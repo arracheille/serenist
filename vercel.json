@@ -2,7 +2,7 @@
     "version": 2,
     "framework": null,
     "functions": {
-        "api/**/*.php": { "runtime": "vercel-php@0.7.2" }
+        "api_laravel/index.php": { "runtime": "vercel-php@0.7.2" }
     },
     "routes": [
         { "src": "/build/(.*)", "dest": "/public/build/$1" },
@@ -16,8 +16,7 @@
         "APP_DEBUG": "true",
         "APP_URL": "https://serenist.vercel.app",
         "APP_KEY": "base64:TGaVaXwhWgjn9akhE4SCSIjGG/cQqvICUQ+PgLA3Bs0=",
-        "CACHE_DRIVER": "file",
-        "LOG_CHANNEL": "stderr",
+        "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "cookie",
         "VIEW_COMPILED_PATH": "/tmp",
         "DB_CONNECTION": "mysql",
