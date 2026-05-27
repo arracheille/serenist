@@ -15,7 +15,7 @@
         "APP_DEBUG": "true",
         "APP_URL": "https://serenist.vercel.app",
         "APP_KEY": "base64:U3bbou/Z423E6Q+DGCOp6mO0jnt0m9KQ175Jm/ll+zQ=",
-        "CACHE_DRIVER": "array",
+        "CACHE_STORE": "array",
         "SESSION_DRIVER": "cookie",
         "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
         "LOG_CHANNEL": "stderr",
