@@ -13,6 +13,11 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+    // --- TAMBAHKAN BLOK INI UNTUK MEMAKSA LOAD VIEW SERVICE PROVIDER ---
+    ->withProviders([
+        \Illuminate\View\ViewServiceProvider::class,
+    ])
+    // ------------------------------------------------------------------
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web(append: [
             HandleInertiaRequests::class,
@@ -29,5 +34,4 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
-})->create();
-
+    })->create();
